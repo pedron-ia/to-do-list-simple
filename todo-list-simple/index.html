@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To‑Do List Simples</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>To‑Do List</h1>
+      <p class="subtitle">Adicione, conclua e organize suas tarefas. Os dados ficam salvos no seu navegador.</p>
+    </header>
+
+    <section class="input-row" aria-label="Adicionar nova tarefa">
+      <input id="taskInput" type="text" placeholder="Digite uma tarefa e pressione Enter…" maxlength="120" />
+      <button id="addTask" aria-label="Adicionar tarefa">Adicionar</button>
+    </section>
+
+    <section class="controls" aria-label="Controles de lista">
+      <div class="filters">
+        <button data-filter="all" class="filter active">Todas</button>
+        <button data-filter="open" class="filter">Abertas</button>
+        <button data-filter="done" class="filter">Concluídas</button>
+      </div>
+      <div class="actions">
+        <button id="clearCompleted" class="ghost">Limpar concluídas</button>
+      </div>
+    </section>
+
+    <ul id="taskList" class="list" aria-live="polite"></ul>
+
+    <footer class="footer">
+      <small>Feito com <span aria-hidden="true">❤️</span> para a faculdade. | <a href="https://github.com" target="_blank" rel="noopener">GitHub</a></small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
